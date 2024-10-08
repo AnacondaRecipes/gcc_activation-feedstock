@@ -1,6 +1,6 @@
 {% set version="11.2.0" %}
 {% set libgfortran_soname="5" %}
-{% set binutils_version="2.38.0" %}
+{% set binutils_version="2.40.0" %}
 {% set glibc_version="2.17" %}  # [not aarch64]
 {% set glibc_version="2.26" %}  # [aarch64]
 
@@ -12,7 +12,7 @@ source:
   path: .
 
 build:
-  number: 0
+  number: 1
   skip: True  # [not linux]
 
 requirements:
