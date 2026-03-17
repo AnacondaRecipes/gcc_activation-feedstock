@@ -62,8 +62,8 @@ function _tc_activation() {
       esac
       if [ "${pass}" = "apply" ]; then
         thing=$(echo ${thing} | tr 'a-z+-' 'A-ZX_')
-        eval oldval="\$${from}$thing"
-        if [ -n "${oldval}" ]; then
+        eval oldval="\${${from}$thing:-}"
+        if [ -n "${oldval:-}" ]; then
           eval export "${to}'${thing}'=\"${oldval}\""
         else
           eval unset '${to}${thing}'

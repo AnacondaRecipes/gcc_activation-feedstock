@@ -12,7 +12,7 @@ source:
   path: .
 
 build:
-  number: 2
+  number: 3
   skip: True  # [not linux]
 
 requirements:
