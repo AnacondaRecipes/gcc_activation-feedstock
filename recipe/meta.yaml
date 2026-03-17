@@ -109,6 +109,8 @@ outputs:
         - cmake >=3.11
         - make
         - sysroot_{{ target_platform }} {{ glibc_version }}
+        # ${PREFIX}/lib/libquadmath.so: undefined reference to `__signgam@GLIBC_2.23'
+        - libgcc-ng {{ version }}
       commands:
         - ${FC} --version
         - pushd tests/fortomp
